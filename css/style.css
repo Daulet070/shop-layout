@@ -1,3 +1,5 @@
+@import './range-slider.css';
+
 @font-face {
     font-family: 'OpenSans';
     font-display: swap;
@@ -44,6 +46,13 @@ body {
     margin: 0 auto;
 }
 
+.crop-height {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+}
+
 /* ------------- Header ------------- */
 .header {
     padding: 40px 0px 40px 0px;
@@ -59,7 +68,7 @@ body {
 
 /* ------- Main ------- */
 
-.main {
+.main-content {
     padding: 0px 35px 0px 35px;
     position: relative;
 }
@@ -161,8 +170,8 @@ body {
 
 .category-panel {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     overflow-x: auto;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
@@ -241,12 +250,272 @@ body {
 
 .category-hide-box {
     position: absolute;
+    right: 0;
     width: 143px;
     height: 60px;
-    right: 0;
     background: linear-gradient(269.76deg, #ffffff 62.83%, rgba(255, 255, 255, 0) 145.7%);
     cursor: pointer;
 }
 
 /* ------------- Catalog section ---------- */
 
+.catalog {
+    display: grid;
+    grid-template-columns: 295px 1fr;
+    grid-gap: 44px;
+    padding-top: 24px;
+}
+
+/* --------------- side bar: Catalog Filter */
+
+.catalog-filter {
+    width: 100%;
+    max-width: 295px;
+    align-self: start;
+}
+
+/* --------------- side bar: Category */
+
+.category {
+    padding-bottom: 23px;
+    width: 100%;
+    max-width: 295px;
+}
+
+.category-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 18px;
+}
+
+/* .category-list {
+    
+} */
+
+.category-item {
+    text-decoration: underline;
+    padding-bottom: 18px;
+}
+
+.category-link {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #5375B7;
+}
+
+.category-items-qantity {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #8b8b8b;
+}
+
+.category-show-next {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #5375B7;
+    cursor: pointer;
+}
+
+/* --------------- side bar: Price */
+
+.price {
+    width: 100%;
+    max-width: 295px;
+    padding: 23px 0px 15px 0px;
+}
+
+.price-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 14;
+    font-weight: 600;
+}
+
+.price-range-inputs {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #808080;
+    padding: 15px 0px;
+}
+
+.price-range-inputs input {
+    padding: 12px 0px 12px 13px;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.price-min {
+
+}
+
+.price-max {
+
+}
+
+/* --------------- side bar: Brends */
+
+.brends {
+    padding-top: 15px;
+    width: 100%;
+    max-width: 295px;
+}
+
+.brends-heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brends-heading {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.brands-checkbox-clean {
+    text-decoration: underline;
+}
+
+.brands-list {
+    padding-top: 14px;
+}
+
+.brands-item {
+    display: flex;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+    padding-bottom: 14px;
+}
+
+.brands-name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 68px;
+}
+
+.brands-checkbox {
+    border: 1px solid #DEDEDE;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+}
+
+.brands-item-qantity {
+}
+
+/* ----------------------- Goods ------------------ */
+
+/* ----------------------- Goods wrapper */
+
+.goods {
+    width: 100%;
+    max-width: 869px;
+}
+
+/* ----------------------- Goods sorting blocks */
+
+.goods-sorting {
+    width: 100%;
+    max-width: 869px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sortong-options {
+    display: flex;
+}
+
+.sorting-heading {
+}
+
+.sorting-option {
+}
+
+.sorting-items-quantity {
+}
+
+.quantity-text {
+}
+
+.quantity {
+}
+
+.sorting-buttons {
+}
+
+.sorting-btn {
+}
+
+/* ---------------------- Goods cards block*/
+
+.goods-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 44px;
+}
+
+.goods-card {
+    width: 100%;
+    /* max-width: 260px; */ /* опционально */
+}
+
+.card-header {
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    background-color: #c4c4c4;
+}
+
+.card-title {
+}
+
+.card-body {
+}
+
+.card-price {
+}
+
+.seil {
+}
+
+.card-footer {
+}
+
+.card-button {
+}
+
+/* --------------------- Goods pagination */
+
+.pagination-wrapper {
+}
+
+.pagination {
+}
+
+.prev {
+}
+
+.next {
+}
+
+@media (max-width: 989px) {
+    .goods-card {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+@media (max-width: 680px) {
+    .catalog {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .goods {
+        display: grid;
+        justify-items: center;
+    }
+}

@@ -1,14 +1,14 @@
 const priceSlider = document.getElementById('price-range-slider');
-const inputNumberStart = document.querySelector(".min");
-const inputNumberEnd = document.querySelector(".max");
+const inputNumberStart = document.querySelector(".price-min");
+const inputNumberEnd = document.querySelector(".price-max");
 
 noUiSlider.create(priceSlider, {
     start: [1000, 900000],
-    connect: true,
+    connect: [false, true, false],
     step: 1,
     range: {
-        'min': 0,
-        'max': 1000000            }
+        'min': [0],
+        'max': [1000000]            }
 });
 
 priceSlider.noUiSlider.on("update", function (values, handle) {
