@@ -166,7 +166,10 @@ body {
 }
 
 .status-title {
+    font-family: Arial;
     font-size: 28px;
+    font-weight: 400;
+    color: #000;
 }
 
 .status-info {
