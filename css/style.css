@@ -166,7 +166,7 @@ body {
 }
 
 .status-title {
-    font-family: Arial;
+    font-family: 'Arial', sans-serif;
     font-size: 28px;
     font-weight: 400;
     color: #000;
@@ -303,9 +303,9 @@ body {
     padding-bottom: 18px;
 }
 
-/* .category-list {
-    
-} */
+.category-list {
+    list-style: none;
+}
 
 .category-item {
     text-decoration: underline;
@@ -606,12 +606,11 @@ body {
     display: flex;
     gap: 30px;
 }
-/* .pagination-item {
-    margin-right: 30px;
-} */
+
 .pagination-item:first-child {
     display: none;
 }
+
 .pagination a {
     text-decoration: none;
     font-family: Arial;
@@ -619,16 +618,7 @@ body {
     color:#A9A9A9;
 }
 
-/* .prev {
-    display: none;
-} */
-
-/* .next {
-} */
-
-/* @media (max-width: 989px) {
-    
-} */
+/* -------------------------- Media queries ------- */
 @media (max-width: 768px) {
     .main-content {
         padding: 0px 20px 0px 20px;
